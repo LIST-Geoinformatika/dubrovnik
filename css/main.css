@@ -1,0 +1,844 @@
+* {
+    margin: 0px;
+}
+
+body {
+    font-size: 0px;
+    margin: 0px;
+    background: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+
+
+
+
+textarea {
+    resize: none;
+}
+/* logo sa linkom na web-stranicu */
+
+.logoupp {
+    position: fixed;
+    z-index: 1;
+    display: inline;
+    margin-left: -8px;
+    top: 10px;
+    right: 10px;
+}
+
+.logoupp img {
+    padding: 5px;
+    height: 35px;
+    background-color: white;
+    /* border: 1px solid #ccc;*/
+    
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px
+}
+
+.logoupp img:hover {
+    background-color: #efeded;
+}
+
+.logoupp img:active {
+    /*border: 1px solid #ccc;*/
+    
+    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.65);
+}
+
+.logoupp a {
+    vertical-align: bottom;
+    font-size: 14px;
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.karta {
+    padding: 0px;
+}
+
+#karta {
+    height: 100vh;
+    padding: 0px;
+}
+
+.glyphicon {
+    font-size: large
+}
+
+.i {
+    font-size: medium
+}
+
+.leaflet-container {
+    background-color: #fff
+}
+/* veličina gumba za alat za mjerenje */
+
+.leaflet-control-boxzoom,
+.leaflet-control-measure .leaflet-control-measure-toggle,
+.leaflet-control-measure .leaflet-control-measure-toggle:hover {
+    width: 26px;
+    height: 26px;
+    border: none;
+    /*background-size: 25px 25px;
+background-position: 4px 4px*/
+}
+/*izbornik sa slojevima*/
+
+.leaflet-control-layers-expanded {
+    padding: 4px 4px 6px 4px
+}
+
+.leaflet-container .leaflet-control-mouseposition {
+    margin-left: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65)
+}
+/*
+.leaflet-control-layers {
+    border-radius: 4px;
+    border: #CCC 1px solid;
+    opacity: 0.9
+}
+
+.leaflet-control-layers:hover {
+    border-radius: 4px;
+    opacity: 0.9
+}
+*/
+
+.leaflet-print-actions a {
+    background-color: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65)
+}
+
+.leaflet-print-actions a:hover {
+    background-color: #A0A098;
+}
+/*ukljuceni alati podloga (easy buttons)*/
+
+.buttonOn {
+    background-color: #dedede!important;
+}
+/*-------------UPUTE --------------------*/
+/* upute - naslovi, logo..*/
+
+.preuzimanjeUputaPdf {
+    margin-left: 15px;
+}
+
+.preuzimanjeUputaPdf a {
+    padding: 7px;
+    font-size: 14px
+}
+
+.popover-title {
+    background-image: url(../images/logo2.png);
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+    font-size: 15px;
+    padding-left: 35px
+}
+/*checbox za upute */
+
+.uputeOdabir {
+    font-size: 12px
+}
+/* upute button*/
+
+.popover-navigation .btn {
+    margin: 3px 0;
+}
+
+.modal-backdrop.in {
+    opacity: 0.2
+}
+/*slanje upita - promjena na chrome-u kod autofill-a*/
+/*
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input:focus { 
+    background-color: white;
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+
+}*/
+/*------------------SLANJE UPITA-------------------------*/
+
+#modalUpit .modal-body{
+font-size: 12px}
+
+
+#modalUpit .form-control, #modalUpit .chosen-container-single .chosen-single{
+height: 30px;
+font-size: 12px
+}
+
+#modalUpit textarea.form-control{
+height: auto}
+
+/*font za slanje upita (objasnjenja)*/
+
+.malaSlova {
+    font-size: 12px;
+}
+/* slanje upita */
+
+.ispuniti {
+    border-color: red;
+}
+
+.crveno {
+    color: red;
+}
+/*koliko se još slova može unijeti u textbox - slanje upita*/
+
+#characters_pitanje,
+#characters_ime,
+#characters_naslov,
+#characters_email,
+#characters_oib,    
+#characters_tel,
+#characters_skype,
+#characters_adresa{
+    color: #aaa;
+    font-size: 11px;
+}
+/*leaflet popup - proširen popup za bolji prikaz upita na karti*/
+
+.leaflet-popup-content-wrapper {
+    width: 500px;
+}
+
+.leaflet-popup-content {
+    width: 464px !important;
+}
+
+#dodatnoGumb{
+    font-size: 12px;
+width:100%;
+    background-color: #F7F7F7;
+    
+}
+/*rgba(243,243,243,0.6);*/
+#dodatnoPolja{
+
+background-color: #F7F7F7;
+padding: 5px 10px;
+    border-radius: 5px;
+
+    border:1px solid #e1e1e1;
+    margin-bottom: 15px
+}
+
+#ikonaDodatno{
+position:absolute;
+    right:30px;
+padding-top: 2px}
+
+
+#nikolina_chosen,
+#koUpit_chosen,
+#kcUpit_chosen {
+    width: 100% !important;
+    height: 34px;
+}
+
+table {
+    width: 100%
+}
+
+.form-control .chosen.select #nikolina_chosen {
+    display:block;
+}
+
+/*-------------SIDEBAR SLOJEVI---------------------------------------*/
+/*sidebar sa slojevima klase*/
+
+#sidebar h2 {
+    margin-top: 7px
+}
+
+.grupeSlojeva,
+.podgrupeSlojevi {
+    margin: 8px 0;
+    cursor: pointer
+}
+
+.grupeSlojeva {
+    font-size: 16px;
+    cursor: pointer
+}
+
+.podgrupeSlojevi {
+    margin-left: 2px;
+    font-size: 14px
+}
+/*.ui-accordion-content{
+margin:8px 0
+}*/
+
+.prvaRazina {
+    margin-left: 8px
+}
+
+.drugaRazina {
+    margin-left: 20px
+}
+
+.uvuceno {
+    margin-left: 10px
+}
+
+.leaflet-sidebar > .leaflet-control {
+    padding-left: 16px;
+    padding-right: 14px
+}
+
+.leaflet-sidebar {
+    z-index: 200
+}
+
+#sidebar hr {
+    margin: 10px 0
+}
+
+label {
+    font-weight: normal
+}
+
+:focus {
+    outline: 0;
+}
+/* ikonice veličina */
+
+#sidebar .fa-lg {
+    margin-right: 5px;
+    font-size: 1.1em
+}
+/* ----------------------kod učitavanja stranice loader---------------------- */
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+}
+/*---------------ostalo---------------------------------*/
+
+.hide {
+    display: none
+}
+
+.show {
+    display: block
+}
+
+.cursorHelp {
+    cursor: help
+}
+/*ikone na lokacijskoj informaciji, bootstrap collapse*/
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    
+    font-family: 'Glyphicons Halflings';
+    /* essential for enabling glyphicon */
+    
+    content: "\e114";
+    /* adjust as needed, taken from bootstrap.css */
+    
+    float: right;
+    /* adjust as needed */
+    
+    color: grey;
+    /* adjust as needed */
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    
+    content: "\e080";
+    /* adjust as needed, taken from bootstrap.css */
+}
+/*cursor kod dragging modals (popup)*/
+
+.modal-header {
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+.modal-header:active {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+}
+/*za mjerenje povrsina - da radi preko svih slojeva*/
+
+.leaflet-zoom-animated {
+    z-index: 2000
+}
+/*login*/
+
+#formaPrijava {
+    margin: 20px 7px 0
+}
+/*--------------------obavijest o cookiesima --------------------------------*/
+
+#cookie {
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    bottom: 0px;
+    padding: 10px 50px;
+    font-size: 12px;
+}
+
+#cookie p {
+    float: left;
+    margin: 10px 0;
+}
+
+#cookie button {
+    float: right;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: white;
+}
+
+#cookie h2 {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    margin: 0 0 6px 0;
+    color: #337ab7;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 18px;
+    padding: 5px
+}
+/*#cookie button{
+align-content: right;
+    display:inline-table
+}
+*/
+/*
+.dropdown-menu {
+    left: 28px;
+    top: -3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+.dropdown-menu>li>a {
+    padding: 0px
+}
+
+.dropdown-menu .divider {
+    margin: 1px 0
+}
+
+.dropdown-menu>li>a:hover {
+    line-height: 1.42857143;
+}
+
+.leaflet-bar a:hover {
+    line-height: 1.42857143;
+}
+
+.leaflet-bar .dropdown-menu a {
+    width: 100%;
+    height: 100%
+}
+*/
+/*-----------------upute kod pokretanja alata------------------------------------*/
+
+#upit-help,
+#lokacijska-help,
+#info-help {
+    font-size: 12px;
+    color: gray;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(240, 240, 240, 0.95);
+    position: fixed;
+    top: 10px;
+    right: 40%;
+    z-index: 3000
+}
+
+#upit-help p,
+#lokacijska-help p,
+#info-help p {
+    margin: 0px
+}
+
+.popover-content {
+    text-align: justify
+}
+
+.popover{
+max-width:700px}
+/*--------------------------alat 2u1 dropdown-------------------------------*/
+
+#alat2u1 {
+    font-size: 12px;
+    color: gray;
+    margin: 5px;
+    text-align: center;
+    /*border:1px solid #ccc;*/
+    
+    border-radius: 5px;
+    background-color: white;
+    /*  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);*/
+}
+
+#alat2u1 a {
+    display: table-footer-group;
+    padding: 0px;
+    margin: 0px;
+    line-height: 26px;
+    text-align: left
+}
+
+#alat2u1 a:hover {
+    background-color: none;
+    padding: 0px;
+    margin: -5px
+}
+/*za info alat u dropdownu pozicija*/
+
+.fa-map-marker {
+    margin-left: 2px!important;
+    margin-right: 5px!important
+}
+
+button[title="Info"] {
+    border-bottom: 1px solid #f0f0f0!important;
+}
+/*alat 2u1 opis*/
+
+#explanationText {
+    color: grey;
+    padding: 0 5px
+}
+
+.fa-lg {
+    line-height: 0.4em
+}
+/*------------------------info klik--------------------------------------*/
+
+.infoKlik {
+    margin: 0px 0px 3px 0px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.infoKlik h3 {
+    background-color: #f4f4f4;
+    margin: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.infoKlik div p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+/*----------------------block na katastru-------------------------------*/
+
+.chosen-container-single .chosen-single {
+    padding: 6px 12px;
+    height: 34px;
+    font-size: 14px;
+    background: #fff;
+    color: #555;
+    line-height: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+#kc_chosen,
+#vrstakc_chosen,
+#opcina_chosen {
+    width: 100% !important;
+    height: 34px;
+}
+
+.chosen-container-single .chosen-single div b {
+    background-position: 0px 7px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 7px;
+}
+/*legenda*/
+
+.simbol {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+}
+
+.simbol_point_stroke {
+    height: 12px;
+    width: 12px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    display: inline-table;
+    float: left;
+    margin: 5px 15px 0px 19px;
+}
+
+.simbol_polygon {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+}
+
+.simbol_stroke {
+    height: 18px;
+    width: 18px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+}
+
+.simbol_simbol {
+    height: 18px;
+    width: 18px;
+    display: inline-table;
+    float: left;
+    margin: -13px 10px -10px 14px; /* 0px 10px 0px 13px; */
+    opacity: 0.6;
+    font-size: 28px;
+}
+
+.simbol_simbol_point {
+    height: 18px;
+    width: 18px;
+    display: inline-table;
+    float: left;
+    margin: -2px 8px 0px 20px;
+    font-size: 14px;
+}
+
+.simbol_simbol_point2 {
+    height: 18px;
+    width: 18px;
+    display: inline-table;
+    float: left;
+    margin: 0px 10px 0px 18px;
+    margin-top:-2px;
+    font-size: 14px;
+}
+
+.simbol_line {
+    height: 0px;
+    width: 18px;
+    border-radius: 5px;
+    display: inline-table;
+    float: left;
+    margin: 9px 13px 0px 15px;
+    opacity: 0.6;
+    border-top-width: 3px;
+    border-top-style: solid;
+}
+
+.simbol_line_dotted {
+    height: 18px;
+    width: 18px;
+    display: inline-table;
+    float: left;
+    margin: 0px 10px 0px 15px;
+    opacity: 0.6;
+    margin-top:-8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.simbol_line_dashed {
+    height: 18px;
+    width: 18px;
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    margin-top:-3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.simbol_point {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    display: inline-table;
+    float: left;
+    margin: 0px 10px 0px 15px;
+    opacity: 0.6;
+}
+
+.simbol_dbc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/dbc.png');
+}
+
+.simbol_gc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/gc.png');
+}
+
+.simbol_ggc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/ggc.png');
+}
+
+.simbol_oc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/oc.png');
+}
+
+.simbol_odc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/odc.png');
+}
+
+.simbol_sc {
+    height: 18px;
+    width: 18px;
+    /*border: 1px solid #555;
+    border-radius: 5px;*/
+    display: inline-table;
+    float: left;
+    margin: 0px 13px 0px 15px;
+    opacity: 0.6;
+    background-image: url('../images/ceste/sc.png');
+}
+/*tekst za legendu*/
+
+.nemaslojeva {
+    padding: 10px 5px
+}
+/*-------------------------------media------------------------*/
+
+@media (max-width: 767px) {
+    .leaflet-iconLayers_bottomright {
+        display: none
+    }
+    .leaflet-container .leaflet-control-mouseposition {
+        display: none
+    }
+    #upit-help,
+    #lokacijska-help,
+    #info-help {
+        width: 100%;
+        right: 0%;
+        z-index: 3000
+    }
+    /*close button za sidebar*/
+    
+    .leaflet-sidebar .close {
+        width: 35px;
+        height: 35px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #upit-help,
+    #lokacijska-help,
+    #info-help {
+        width: 100%;
+        right: 0%;
+        z-index: 3000
+    }
+}
+
+.modal-body {
+    font-size: 16px;
+}
+
+.sivo {
+    color: #aaa;
+}
+
+.leaflet-bar a:last-child,
+.leaflet-bar a:first-child {
+    line-height: 26px;
+}
