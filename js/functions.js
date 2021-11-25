@@ -3,7 +3,6 @@ var overlaylayers = [namjena, promet, telekomunikacija, energ_sustavi, voda, odv
     ljetnikovci, zelenikoridori,zastitnozelenilo,vanjskisportski,trgovi,stambenozelenilo,spomenpodrucja,prirodnidoprirodni,parkovi,groblja,djecjaigrimladi, markers, heat]
     
 var upaljeni_slojevi = []; //varijabla u koju se spremaju trenutno upaljeni slojevi
-
 function upaliSloj(layer_id){
     if (! map.hasLayer(overlaylayers[layer_id])){
         map.addLayer(overlaylayers[layer_id]);
@@ -497,7 +496,6 @@ $(document).ready(function(){
 
     $(".checkbox").click(function(){
 		var layer_id = parseInt(this.id);
-
 		for (var i = 0; i < overlaylayers.length; i++) {
 			if (layer_id == i){
 				if (map.hasLayer(overlaylayers[i])) {

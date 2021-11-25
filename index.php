@@ -65,6 +65,8 @@
 		<!--leaflet plugins-->
 
 		<!-- min -->
+		<script src="js/data/zgrade.js"></script>
+
 		<script type="text/javascript" src="js/L.Control.MousePosition.min.js"></script>
 		<script type="text/javascript" src="js/iconLayers.min.js"></script>
 		<script type="text/javascript" src="js/leaflet.markercluster.js"></script>
@@ -1216,9 +1218,10 @@
 		
 
 		<!-- min -->
+		<!--<script src="js/data/zgrade.json"></script>-->
 		<script src="js/cookies.js"></script>
 		<script type="text/javascript" src="js/leaflet-measure.min.js"></script>
-		<script type=text/javascript src="js/karta.js"></script>
+		<script type="text/javascript" src="js/karta.js"></script>
 		<script src="js/bootstrap-select.min.js"></script>
 		<script type="text/javascript" src="js/chosen.jquery.min.js"></script>
 		<script type="text/javascript" src="js/ostalo.js"></script>

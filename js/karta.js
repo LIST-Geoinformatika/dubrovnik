@@ -1,3 +1,5 @@
+
+
 var UrlOSM = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     UrlDGU = 'http://geoportal.dgu.hr/wms';
     UrlGUP = 'https://dev.li-st.net/geoserver/up4c_du/wms';
@@ -294,12 +296,12 @@ var katcestice = new L.NonTiledLayer.WMS(UrlGUP, {
     zIndex: 4
 });
 
-var zgrade = new L.NonTiledLayer.WMS(UrlGUP, {
+/*var zgrade = new L.NonTiledLayer.WMS(UrlGUP, {
     layers: 'up4c_du:dkp_zgr',
     transparent: true,
     format: 'image/png',
     zIndex: 2
-});
+});*/
 
 
 
@@ -449,7 +451,7 @@ var LeafIcon = L.Icon.extend({
     options: {
         iconSize: [25, 41],
         iconAnchor: [12, 41],
-        popupAnchor: [-3, -36]
+        //popupAnchor: [-3, -36]
     }
 });
 
@@ -749,9 +751,89 @@ if (isMobile.any()) {
     setTimeout(function () {
         sidebar.hide();
     }, 1800);
-  
     var centar= new L.LatLng(42.6535, 18.1100)
+};
 
-    
-    
-}
+
+const zgradeStyle = {
+    "fillColor": "#0078A8",
+    "color": "#0078A8",
+    "weight": 1,
+    "opacity": 0.7
+};
+
+const zgrade = new L.GeoJSON(zgradea, {
+    onEachFeature: onEachObject,
+    style: zgradeStyle
+}).addTo(map); 
+/*layerGroup = new L.LayerGroup();
+
+fetch("js/data/zgrade.json")
+    .then(function(response) {
+    return response.json();
+    })
+    .then(function(data) {
+        //console.log(data)
+        zgrade.addData(data.features);
+});*/
+
+function onEachObject(feature, layer) {
+    let popupContent = document.createElement('div');
+    popupContent.classList.add('main-popup-div');
+
+    let header = document.createElement('h3');
+    header.classList.add('header-popup');
+
+    let divcontent = document.createElement('div');
+    divcontent.classList.add('divcontent');
+
+    popupContent.appendChild(header);
+  
+
+    if (feature.properties.vrsta_namj) {
+        let text_p = document.createElement('p');
+        text_p.classList.add('popup-p');
+        text_p.innerHTML = "Vrsta objekta<br>";
+
+        let text_span = document.createElement('span');
+        text_span.classList.add('popup-span');
+        text_span.innerHTML = feature.properties.vrsta_namj;
+
+        text_p.appendChild(text_span);
+        divcontent.appendChild(text_p);
+    };
+
+    if (feature.properties.bruto_p) {
+        let text_p = document.createElement('p');
+        text_p.classList.add('popup-p');
+        text_p.innerHTML = "Bruto površina (m2)<br>";
+
+        let text_span = document.createElement('span');
+        text_span.classList.add('popup-span');
+        text_span.innerHTML = feature.properties.bruto_p;
+
+        text_p.appendChild(text_span);
+        divcontent.appendChild(text_p);
+    };
+
+    if (feature.properties.katnost) {
+        let text_p = document.createElement('p');
+        text_p.classList.add('popup-p');
+        text_p.innerHTML = "Katnost<br>";
+
+        let text_span = document.createElement('span');
+        text_span.classList.add('popup-span');
+        text_span.innerHTML = feature.properties.katnost;
+
+        text_p.appendChild(text_span);
+        divcontent.appendChild(text_p);
+    };
+    popupContent.appendChild(divcontent);
+
+    layer.bindPopup(popupContent);
+  
+};
+
+
+
+  
